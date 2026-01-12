@@ -9,7 +9,7 @@ let allReadings = [];
 // DOM references
 // ------------------------------
 
-const tableBody = document.querySelector("tbody");
+const tableBody = document.getElementById("book-table-body") //document.querySelector("tbody");
 const statusFilter = document.getElementById("statusFilter");
 
 // ------------------------------
@@ -69,11 +69,19 @@ function renderReadings(readings) {
     readings.forEach(reading => {
         const row = document.createElement("tr");
 
+        // store the fetched values.
+        const title = reading.book.title;
+        const authors = reading.book.authors.join(", ");
+        const status = reading.status.charAt(0).toUpperCase() + reading.status.slice(1); // capitalize first letter
+        const rating = reading.rating !== null ? `${reading.rating} / 5` : "—";
+        const notes = reading.notes || "";
+
         row.innerHTML = `
-            <td>${reading.title}</td>
-            <td>${reading.author}</td>
-            <td>${reading.status}</td>
-            <td>${reading.year}</td>
+            <td>${title}</td>
+            <td>${authors}</td>
+            <td>${status}</td>
+            <td>${rating}</td>
+            <td>${notes}</td>
         `;
 
         tableBody.appendChild(row);
