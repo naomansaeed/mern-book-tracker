@@ -52,6 +52,7 @@ function renderReadings (readings) {
     // querySelector() uses CSS selector syntax.
     // '#book-table-body' means: element with this ID.
 
+    //const tableBody = document.getElementById("book-table-body");
     const tableBody = document.querySelector("#book-table-body");
 
     // Clear existing rows before rendering.
