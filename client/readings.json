@@ -5,7 +5,7 @@
             "title": "The Pragmatic Programmer",
             "authors": ["Andrew Hunt", "David Thomas"]
         },
-        "status": "Finished",
+        "status": "finished",
         "rating": 5,
         "notes": "Clear, practical advice for software development."
     },
@@ -15,7 +15,7 @@
             "title": "Clean Code",
             "authors": ["Robert C. Martin"]
         },
-        "status": "Reading",
+        "status": "reading",
         "rating": null,
         "notes": "Focus on readability and maintainability."
     },
@@ -25,7 +25,7 @@
             "title": "Designing Data-Intensive Applications",
             "authors": ["Martin Kleppmann"]
         },
-        "status": "Planned",
+        "status": "planned",
         "rating": null,
         "notes": "Recommended for understanding modern system design."
     }
