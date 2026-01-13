@@ -1,67 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Book Tracker | MERN</title>
-</head>
-<body>
-    <header>
-        <h1>Book Tracker</h1>
-        <p>A simple application to track books I am reading or plan to read.</p>
-    </header>
-    <main>
-        <section>
-            <h2>My Books</h2>
-            <label for="statusFilter">Filter by status:</label>
-            <select id="statusFilter">
-                <option value="all">All</option>
-                <option value="planned">Planned</option>
-                <option value="reading">Reading</option>
-                <option value="finished">Finished</option>
-            </select>
-
-            <table>
-                <thead>
-                    <tr>
-                        <th>Title</th>
-                        <th>Author</th>
-                        <th>Status</th>
-                        <th>Rating</th>
-                        <th>Notes</th>
-                    </tr>
-                </thead>
-                <tbody id="book-table-body">
-            <!--        <tr>
-                        <td>The Pragmatic Programmer</td>
-                        <td>Andrew Hunt, David Thomas</td>
-                        <td>Finished</td>
-                        <td>5 / 5</td>
-                        <td>Clear, practical advice for software development.</td>
-                    </tr>
-                    <tr>
-                        <td>Clean Code</td>
-                        <td>Robert C. Martin</td>
-                        <td>Reading</td>
-                        <td>—</td>
-                        <td>Focus on readability and maintainability.</td>
-                    </tr>
-                    <tr>
-                        <td>Designing Data-Intensive Applications</td>
-                        <td>Martin Kleppmann</td>
-                        <td>Planned</td>
-                        <td>—</td>
-                        <td>Recommended for understanding modern system design.</td>
-                    </tr>  -->
-                </tbody>
-            </table>
-        </section>
-    </main>
-    <footer>
-         <p>Personal learning project — MERN stack</p>
-    </footer>
-    <!--<script src="data.js"></script> -->
-    <script src="script.js"> </script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>client</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>
