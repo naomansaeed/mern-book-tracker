@@ -1,6 +1,8 @@
+import "./BookTable.css";
+
 function BookTable({ readings }) {
   return (
-    <table border="1" cellPadding="8">
+    <table className="book-table">
       <thead>
         <tr>
           <th>Title</th>
