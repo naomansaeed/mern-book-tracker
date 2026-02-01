@@ -26,6 +26,7 @@ State is the cause; UI is the effect.
 */
   const [readings, setReadings] = useState([]);
   const [statusFilter, setStatusFilter] = useState("all");
+  const [loading, setLoading] = useState(true);
 
   // ------------------------------
   // Data loading
@@ -41,9 +42,11 @@ Triggers a re-render automatically
       .then((response) => response.json())
       .then((data) => {
         setReadings(data);
+        setLoading(false);
       })
       .catch((error) => {
         console.error("Failed to load readings:", error);
+        setLoading(false);
       });
   }, []);
 
@@ -75,16 +78,23 @@ Renders table, using filtered data
 
 App does not care how the table renders — only what data it gets.
   */
+ 
   return (
+    
     <main>
       <h1>Book Tracker</h1>
 
-      <StatusFilter
-        value={statusFilter}
-        onChange={setStatusFilter}
-      />
-
-     <BookTable readings={filteredReadings} />
+      {loading ? (
+        <p>Loading your reading list ...</p>
+      ) : (
+        <>
+          <StatusFilter
+            value={statusFilter}
+            onChange={setStatusFilter}
+          />
+          <BookTable readings={filteredReadings} />
+        </>
+      )}
     </main>
   );
 }
