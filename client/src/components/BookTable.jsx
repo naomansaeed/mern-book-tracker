@@ -13,7 +13,15 @@ function BookTable({ readings }) {
         </tr>
       </thead>
       <tbody>
-        {readings.map((reading) => {
+        {
+          readings.length === 0 ? (
+          <tr>
+            <td colSpan="5" className="no-results">
+              No books match this filter
+            </td>
+          </tr>
+        ) : (
+        readings.map((reading) => {
           const title = reading.book.title;
           const authors = reading.book.authors.join(", ");
           const status =
@@ -32,7 +40,8 @@ function BookTable({ readings }) {
               <td>{notes}</td>
             </tr>
           );
-        })}
+        })
+      )}
       </tbody>
     </table>
   );

@@ -9,3 +9,9 @@
   padding: 8px;
   text-align: left;
 }
+
+.no-results {
+  text-align: center;
+  color: #666;
+  font-style: italic;
+}
