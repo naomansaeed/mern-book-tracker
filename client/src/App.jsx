@@ -38,7 +38,8 @@ Updates state via setReadings
 Triggers a re-render automatically
 */
   useEffect(() => {
-    fetch("/readings.json")
+      fetch("http://localhost:5000/api/books")
+    //fetch("/readings.json")
       .then((response) => response.json())
       .then((data) => {
         setReadings(data);
