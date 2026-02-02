@@ -11,6 +11,11 @@ app.get('/api/books', (req, res) => {
   res.json(readings);
 });
 
+// Optional: Add a root route to avoid "Cannot GET /"
+app.get('/', (req, res) => {
+  res.send('Book Tracker API. Visit /api/books for data.');
+});
+
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
 });
